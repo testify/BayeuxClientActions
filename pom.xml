@@ -18,6 +18,12 @@
     <name>Testify Bayeux Client Actions</name>
     <description>Bayeux Client Actions for Testify</description>
 
+    <scm>
+        <connection>scm:git:https://github.com/testify/BayeuxClientActions.git</connection>
+        <developerConnection>scm:git:https://github.com/testify/BayeuxClientActions.git</developerConnection>
+        <url>https://github.com/testify/BayeuxClientActions.git</url>
+    </scm>
+
     <modules>
         <module>StartBayeuxClient</module>
         <module>StopBayeuxClient</module>

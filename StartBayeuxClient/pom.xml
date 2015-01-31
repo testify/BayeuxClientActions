@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.codice.testify.actions</groupId>
+        <artifactId>BayeuxClientActions</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>org.codice.testify.actions.BayeuxClientActions</groupId>
+    <artifactId>StartBayeuxClient</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>bundle</packaging>
+
+    <name>Testify Bayeux Client Start Action</name>
+    <description>Testify Action for starting a Bayeux client</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>1.4.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.codice.testify</groupId>
+            <artifactId>testify-core</artifactId>
+            <version>0.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.cometd.java</groupId>
+            <artifactId>bayeux-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.cometd.java</groupId>
+            <artifactId>cometd-java-client</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.5.3</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-Name>${project.artifactId}</Bundle-Name>
+                        <Bundle-Description>${project.description}</Bundle-Description>
+                        <Bundle-Vendor>${project.organization.name}</Bundle-Vendor>
+                        <Bundle-Version>${project.version}</Bundle-Version>
+                        <Bundle-Activator>org.codice.testify.actions.bayeux.StartBayeuxClient</Bundle-Activator>
+                        <Import-Package>
+                            org.codice.testify.objects,
+                            org.codice.testify.actions,
+                            org.osgi.framework
+                        </Import-Package>
+                        <Export-Package>
+                            org.codice.testify.actions.bayeux.support.*,
+                            org.cometd.client*,
+                            org.cometd.bayeux*
+                        </Export-Package>
+                        <Embed-Dependency>
+                            cometd-java-client,
+                            bayeux-api
+                        </Embed-Dependency>
+                        <Embed-Transitive>true</Embed-Transitive>
+                        <Embed-Directory>dependencies</Embed-Directory>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    
+</project>
