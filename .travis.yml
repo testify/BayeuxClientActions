@@ -8,3 +8,7 @@ jdk:
 branches:
   except:
   - travis
+env:
+  global:
+  - secure: GiOz8xr1uZQomUqM81rDFziCWjBlUVudjuUQQry6oZbxNhIbYPblZ3A6AFNgETXD95cRBCAq5p3awXRpxGSnDRT1zEP5CiKyiNBQma3X0RJVd8h1p6LW/by9IlfPF5G4l3B5tXLxFbC1nrKgDTm8mk/NiD/yLWVb0GDGkCrrWtU=
+  - secure: OR/1Lmdsz4CGmJzToLsbhbtU0rTitwLmBIwGGBND/wwkLQwGEp3C9NP6c9e/LYjfUzMQqSkt8+cNVPYWEGy7pbBjY9utmx7sp/HrIMfoXc1mr06qVLVznKm6C+94p3emN+faSF9xKFFOZoG49DDN3J+ek3aEqXQ0GG8aw3ZGeLc=
