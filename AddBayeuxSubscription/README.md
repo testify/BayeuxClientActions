@@ -6,7 +6,7 @@ AddBayeuxSubscription Action
 ### AddBayeuxSubscription
   *Takes in a name which is used as a unique identifier for the client to add the subscription to as well as a channel to subscribe to*
 
-    StartBayeuxClientSubscription::{client-name}=={channel}
+    AddBayeuxClientSubscription::{client-name}=={channel}
 ## Example
 
     <testcase>
@@ -14,7 +14,7 @@ AddBayeuxSubscription Action
       ..
       <preTestProcessorAction>
         StartBayeuxClient::{client-name}=={client-endpoint}
-        StartBayeuxSubscription::{client-name}==${channel}
+        AddBayeuxSubscription::{client-name}==${channel}
       </preTestProcessorAction>
       ..
       ..
