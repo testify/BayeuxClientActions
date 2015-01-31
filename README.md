@@ -1,4 +1,4 @@
-Testify Bayeux Client Actions
+Testify Bayeux Client Actions [![Build Status](https://travis-ci.org/testify/BayeuxClientActions.svg?branch=master)](https://travis-ci.org/testify/BayeuxClientActions)
 =============================
 *Bayeux Client Actions for Testify*
 
